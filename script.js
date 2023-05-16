@@ -12,6 +12,7 @@ class Particle {
     this.velocityX = (width / 2 - xPos) * this.speedFactor; 
     this.velocityY = (height / 2 - yPos) * this.speedFactor;
     this.active = true;
+    this.colour = `rgb(${randomNum(0, 255)}, ${randomNum(0, 255)}, ${randomNum(0, 255)})`;
   }
 
   drawParticle() {
