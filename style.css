@@ -43,14 +43,14 @@ header {
   margin-bottom: 2rem;
 }
 
-.ul-1 {
+.header-list {
   width: 100%;
   display: flex;
   gap: 3rem;
   justify-content: space-evenly;
 }
 
-.li-1 {
+.list-1 {
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
 }
@@ -61,14 +61,14 @@ footer {
   margin-top: 6px;
 }
 
-.ul-2 {
+.footer-list {
   width: 100%;
   display: flex;
   gap: 3rem;
   justify-content: center;
 }
 
-.li-2 {
+.list-2 {
   color: white;
   filter: drop-shadow(0px 0px 5px white)
 }
