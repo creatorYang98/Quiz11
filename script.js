@@ -8,11 +8,10 @@ class Particle {
     this.svgElement;
     this.animDuration = randomNum(2, 3);
     this.gravity = 0.04;
-    this.speedFactor = randomNum(0.01, 0.025);  // 添加一个随机速度因子
+    this.speedFactor = randomNum(0.01, 0.025);
     this.velocityX = (width / 2 - xPos) * this.speedFactor; 
     this.velocityY = (height / 2 - yPos) * this.speedFactor;
     this.active = true;
-    this.colour = `rgb(${randomNum(0, 255)}, ${randomNum(0, 255)}, ${randomNum(0, 255)})`; // random colour for particle
   }
 
   drawParticle() {
