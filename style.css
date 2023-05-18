@@ -19,12 +19,12 @@ html {
   background: linear-gradient(to right bottom, #F0D1BD, #EABDB8 100%);
 }
 
-#center-svg {
+#main-page {
+  /* Responsive layout for web pages with flexBox. */
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
-  /* height: 100vh; */
+  /* Vertical alignment along the main axis (y-axis) */
   flex-direction: column;
+  /* the centre of the item */
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -32,6 +32,7 @@ html {
 }
 
 #base-svg {
+  /* making svg into responsive */
   max-width: 90%;
   height: auto;
 }
@@ -52,7 +53,9 @@ header {
 
 .list-1 {
   color: white;
+  /* As the viewport width changes, the font size will be scaled. */
   font-size: 1.4vw;
+  /* add shadow to make webpage more vivid */
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
 }
 
@@ -71,6 +74,7 @@ footer {
 
 .list-2 {
   color: white;
+  /* As the viewport width changes, the icon size will be scaled. */
   font-size: 1.4vw;
   filter: drop-shadow(0px 0px 5px white)
 }

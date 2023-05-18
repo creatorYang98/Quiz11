@@ -1,16 +1,16 @@
 class Particle {
   constructor(xPos, yPos, radius) {
-    this.initialX = xPos; 
-    this.initialY = yPos; 
+    this.initialX = xPos;
+    this.initialY = yPos;
     this.x = xPos;
     this.y = yPos;
     this.r = radius;
     this.svgElement;
-    this.animDuration = randomNum(2, 3);
-    this.gravity = 0.04;
-    this.speedFactor = randomNum(0.01, 0.025);
-    this.velocityX = (width / 2 - xPos) * this.speedFactor; 
-    this.velocityY = (height / 2 - yPos) * this.speedFactor;
+
+    //Moving towards the centre of the svg
+    this.speedNumber = randomNum(0.01, 0.025);
+    this.velocityX = (width / 2 - xPos) * this.speedNumber;
+    this.velocityY = (height / 2 - yPos) * this.speedNumber;
     this.active = true;
     this.colour = `rgb(${randomNum(0, 255)}, ${randomNum(0, 255)}, ${randomNum(0, 255)})`;
   }
@@ -27,10 +27,10 @@ class Particle {
       this.x += this.velocityX;
       this.y += this.velocityY;
 
-
+      //The particle is removed once it reaches the centre of the svg and is recirculated.
       if (Math.abs(this.x - width / 2) < 5 && Math.abs(this.y - height / 2) < 5) {
         svg.removeChild(this.svgElement);
-        this.active = false; 
+        this.active = false;
         let particleX = randomNum(0, width);
         let particleY = randomNum(0, height);
         let particleSize = randomNum(width * 0.003, width * 0.009);
